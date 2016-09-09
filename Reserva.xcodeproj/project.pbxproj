@@ -1,0 +1,639 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F9DF53D1D82D01300289A90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DF53C1D82D01300289A90 /* main.m */; };
+		8F9DF5401D82D01300289A90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DF53F1D82D01300289A90 /* AppDelegate.m */; };
+		8F9DF5431D82D01300289A90 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DF5421D82D01300289A90 /* ViewController.m */; };
+		8F9DF5461D82D01300289A90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9DF5441D82D01300289A90 /* Main.storyboard */; };
+		8F9DF5481D82D01300289A90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F9DF5471D82D01300289A90 /* Assets.xcassets */; };
+		8F9DF54B1D82D01300289A90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9DF5491D82D01300289A90 /* LaunchScreen.storyboard */; };
+		8F9DF5561D82D01300289A90 /* Reserva_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DF5551D82D01300289A90 /* Reserva_Tests.m */; };
+		8F9DF5611D82D01300289A90 /* Reserva_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DF5601D82D01300289A90 /* Reserva_UITests.m */; };
+		8F9DF5701D82D04A00289A90 /* ModelSelectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DF56F1D82D04A00289A90 /* ModelSelectTableViewController.m */; };
+		8F9DF5741D82D9F700289A90 /* AvailabilityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DF5731D82D9F700289A90 /* AvailabilityTableViewController.m */; };
+		8F9DF5771D82DB9000289A90 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DF5761D82DB9000289A90 /* Store.m */; };
+		B08ED2727D777BA7F0D05646 /* Pods_Reserva.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973BAA73FE8FC25C5AFE67A8 /* Pods_Reserva.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F9DF5521D82D01300289A90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F9DF5301D82D01300289A90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F9DF5371D82D01300289A90;
+			remoteInfo = "Reservá";
+		};
+		8F9DF55D1D82D01300289A90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F9DF5301D82D01300289A90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F9DF5371D82D01300289A90;
+			remoteInfo = "Reservá";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4EC5A2AC5B794AB3303F8D09 /* Pods-Reserva.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reserva.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reserva/Pods-Reserva.debug.xcconfig"; sourceTree = "<group>"; };
+		8F9DF5381D82D01300289A90 /* Reserva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reserva.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F9DF53C1D82D01300289A90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8F9DF53E1D82D01300289A90 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8F9DF53F1D82D01300289A90 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8F9DF5411D82D01300289A90 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8F9DF5421D82D01300289A90 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8F9DF5451D82D01300289A90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8F9DF5471D82D01300289A90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F9DF54A1D82D01300289A90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8F9DF54C1D82D01300289A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F9DF5511D82D01300289A90 /* ReservaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReservaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F9DF5551D82D01300289A90 /* Reserva_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reserva_Tests.m; sourceTree = "<group>"; };
+		8F9DF5571D82D01300289A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F9DF55C1D82D01300289A90 /* ReservaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReservaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F9DF5601D82D01300289A90 /* Reserva_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reserva_UITests.m; sourceTree = "<group>"; };
+		8F9DF5621D82D01300289A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F9DF56E1D82D04A00289A90 /* ModelSelectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelSelectTableViewController.h; sourceTree = "<group>"; };
+		8F9DF56F1D82D04A00289A90 /* ModelSelectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelSelectTableViewController.m; sourceTree = "<group>"; };
+		8F9DF5711D82D43700289A90 /* URLConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLConstants.h; sourceTree = "<group>"; };
+		8F9DF5721D82D9F700289A90 /* AvailabilityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvailabilityTableViewController.h; sourceTree = "<group>"; };
+		8F9DF5731D82D9F700289A90 /* AvailabilityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvailabilityTableViewController.m; sourceTree = "<group>"; };
+		8F9DF5751D82DB9000289A90 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
+		8F9DF5761D82DB9000289A90 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
+		973BAA73FE8FC25C5AFE67A8 /* Pods_Reserva.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reserva.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE85A01F83DA1BADC139CFA6 /* Pods-Reserva.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reserva.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reserva/Pods-Reserva.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F9DF5351D82D01300289A90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B08ED2727D777BA7F0D05646 /* Pods_Reserva.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F9DF54E1D82D01300289A90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F9DF5591D82D01300289A90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		35E003900AC304A75ED139F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4EC5A2AC5B794AB3303F8D09 /* Pods-Reserva.debug.xcconfig */,
+				FE85A01F83DA1BADC139CFA6 /* Pods-Reserva.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8F9DF52F1D82D01300289A90 = {
+			isa = PBXGroup;
+			children = (
+				8F9DF53A1D82D01300289A90 /* Reservá */,
+				8F9DF5541D82D01300289A90 /* ReserváTests */,
+				8F9DF55F1D82D01300289A90 /* ReserváUITests */,
+				8F9DF5391D82D01300289A90 /* Products */,
+				35E003900AC304A75ED139F4 /* Pods */,
+				C7B6050818F49801571C468A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8F9DF5391D82D01300289A90 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F9DF5381D82D01300289A90 /* Reserva.app */,
+				8F9DF5511D82D01300289A90 /* ReservaTests.xctest */,
+				8F9DF55C1D82D01300289A90 /* ReservaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F9DF53A1D82D01300289A90 /* Reservá */ = {
+			isa = PBXGroup;
+			children = (
+				8F9DF53E1D82D01300289A90 /* AppDelegate.h */,
+				8F9DF53F1D82D01300289A90 /* AppDelegate.m */,
+				8F9DF5411D82D01300289A90 /* ViewController.h */,
+				8F9DF5421D82D01300289A90 /* ViewController.m */,
+				8F9DF5751D82DB9000289A90 /* Store.h */,
+				8F9DF5761D82DB9000289A90 /* Store.m */,
+				8F9DF56E1D82D04A00289A90 /* ModelSelectTableViewController.h */,
+				8F9DF56F1D82D04A00289A90 /* ModelSelectTableViewController.m */,
+				8F9DF5721D82D9F700289A90 /* AvailabilityTableViewController.h */,
+				8F9DF5731D82D9F700289A90 /* AvailabilityTableViewController.m */,
+				8F9DF5441D82D01300289A90 /* Main.storyboard */,
+				8F9DF5711D82D43700289A90 /* URLConstants.h */,
+				8F9DF5471D82D01300289A90 /* Assets.xcassets */,
+				8F9DF5491D82D01300289A90 /* LaunchScreen.storyboard */,
+				8F9DF54C1D82D01300289A90 /* Info.plist */,
+				8F9DF53B1D82D01300289A90 /* Supporting Files */,
+			);
+			path = "Reservá";
+			sourceTree = "<group>";
+		};
+		8F9DF53B1D82D01300289A90 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F9DF53C1D82D01300289A90 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8F9DF5541D82D01300289A90 /* ReserváTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F9DF5551D82D01300289A90 /* Reserva_Tests.m */,
+				8F9DF5571D82D01300289A90 /* Info.plist */,
+			);
+			path = "ReserváTests";
+			sourceTree = "<group>";
+		};
+		8F9DF55F1D82D01300289A90 /* ReserváUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8F9DF5601D82D01300289A90 /* Reserva_UITests.m */,
+				8F9DF5621D82D01300289A90 /* Info.plist */,
+			);
+			path = "ReserváUITests";
+			sourceTree = "<group>";
+		};
+		C7B6050818F49801571C468A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				973BAA73FE8FC25C5AFE67A8 /* Pods_Reserva.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F9DF5371D82D01300289A90 /* Reserva */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F9DF5651D82D01300289A90 /* Build configuration list for PBXNativeTarget "Reserva" */;
+			buildPhases = (
+				C9D7EE7F22892554BBF1ED05 /* [CP] Check Pods Manifest.lock */,
+				8F9DF5341D82D01300289A90 /* Sources */,
+				8F9DF5351D82D01300289A90 /* Frameworks */,
+				8F9DF5361D82D01300289A90 /* Resources */,
+				8E2ADF2148E362D5281A2C82 /* [CP] Embed Pods Frameworks */,
+				404D743784FEA32092CA31D3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Reserva;
+			productName = "Reservá";
+			productReference = 8F9DF5381D82D01300289A90 /* Reserva.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8F9DF5501D82D01300289A90 /* ReservaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F9DF5681D82D01300289A90 /* Build configuration list for PBXNativeTarget "ReservaTests" */;
+			buildPhases = (
+				8F9DF54D1D82D01300289A90 /* Sources */,
+				8F9DF54E1D82D01300289A90 /* Frameworks */,
+				8F9DF54F1D82D01300289A90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F9DF5531D82D01300289A90 /* PBXTargetDependency */,
+			);
+			name = ReservaTests;
+			productName = "ReserváTests";
+			productReference = 8F9DF5511D82D01300289A90 /* ReservaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8F9DF55B1D82D01300289A90 /* ReservaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F9DF56B1D82D01300289A90 /* Build configuration list for PBXNativeTarget "ReservaUITests" */;
+			buildPhases = (
+				8F9DF5581D82D01300289A90 /* Sources */,
+				8F9DF5591D82D01300289A90 /* Frameworks */,
+				8F9DF55A1D82D01300289A90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F9DF55E1D82D01300289A90 /* PBXTargetDependency */,
+			);
+			name = ReservaUITests;
+			productName = "ReserváUITests";
+			productReference = 8F9DF55C1D82D01300289A90 /* ReservaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F9DF5301D82D01300289A90 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Aladdin Inc.";
+				TargetAttributes = {
+					8F9DF5371D82D01300289A90 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 4YUXZK65CA;
+						ProvisioningStyle = Automatic;
+					};
+					8F9DF5501D82D01300289A90 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 4YUXZK65CA;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8F9DF5371D82D01300289A90;
+					};
+					8F9DF55B1D82D01300289A90 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 4YUXZK65CA;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8F9DF5371D82D01300289A90;
+					};
+				};
+			};
+			buildConfigurationList = 8F9DF5331D82D01300289A90 /* Build configuration list for PBXProject "Reserva" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F9DF52F1D82D01300289A90;
+			productRefGroup = 8F9DF5391D82D01300289A90 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F9DF5371D82D01300289A90 /* Reserva */,
+				8F9DF5501D82D01300289A90 /* ReservaTests */,
+				8F9DF55B1D82D01300289A90 /* ReservaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F9DF5361D82D01300289A90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F9DF54B1D82D01300289A90 /* LaunchScreen.storyboard in Resources */,
+				8F9DF5481D82D01300289A90 /* Assets.xcassets in Resources */,
+				8F9DF5461D82D01300289A90 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F9DF54F1D82D01300289A90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F9DF55A1D82D01300289A90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		404D743784FEA32092CA31D3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Reserva/Pods-Reserva-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E2ADF2148E362D5281A2C82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Reserva/Pods-Reserva-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9D7EE7F22892554BBF1ED05 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F9DF5341D82D01300289A90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F9DF5431D82D01300289A90 /* ViewController.m in Sources */,
+				8F9DF5401D82D01300289A90 /* AppDelegate.m in Sources */,
+				8F9DF5701D82D04A00289A90 /* ModelSelectTableViewController.m in Sources */,
+				8F9DF5771D82DB9000289A90 /* Store.m in Sources */,
+				8F9DF53D1D82D01300289A90 /* main.m in Sources */,
+				8F9DF5741D82D9F700289A90 /* AvailabilityTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F9DF54D1D82D01300289A90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F9DF5561D82D01300289A90 /* Reserva_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F9DF5581D82D01300289A90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F9DF5611D82D01300289A90 /* Reserva_UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F9DF5531D82D01300289A90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F9DF5371D82D01300289A90 /* Reserva */;
+			targetProxy = 8F9DF5521D82D01300289A90 /* PBXContainerItemProxy */;
+		};
+		8F9DF55E1D82D01300289A90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F9DF5371D82D01300289A90 /* Reserva */;
+			targetProxy = 8F9DF55D1D82D01300289A90 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8F9DF5441D82D01300289A90 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F9DF5451D82D01300289A90 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8F9DF5491D82D01300289A90 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F9DF54A1D82D01300289A90 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8F9DF5631D82D01300289A90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F9DF5641D82D01300289A90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F9DF5661D82D01300289A90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EC5A2AC5B794AB3303F8D09 /* Pods-Reserva.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4YUXZK65CA;
+				INFOPLIST_FILE = "Reservá/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aladdincloud.Reserva-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8F9DF5671D82D01300289A90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE85A01F83DA1BADC139CFA6 /* Pods-Reserva.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4YUXZK65CA;
+				INFOPLIST_FILE = "Reservá/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aladdincloud.Reserva-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8F9DF5691D82D01300289A90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4YUXZK65CA;
+				INFOPLIST_FILE = "ReserváTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aladdincloud.Reserva-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reserva.app/Reserva";
+			};
+			name = Debug;
+		};
+		8F9DF56A1D82D01300289A90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4YUXZK65CA;
+				INFOPLIST_FILE = "ReserváTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aladdincloud.Reserva-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reserva.app/Reserva";
+			};
+			name = Release;
+		};
+		8F9DF56C1D82D01300289A90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 4YUXZK65CA;
+				INFOPLIST_FILE = "ReserváUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aladdincloud.Reserva-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Reservá";
+			};
+			name = Debug;
+		};
+		8F9DF56D1D82D01300289A90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 4YUXZK65CA;
+				INFOPLIST_FILE = "ReserváUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aladdincloud.Reserva-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Reservá";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F9DF5331D82D01300289A90 /* Build configuration list for PBXProject "Reserva" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F9DF5631D82D01300289A90 /* Debug */,
+				8F9DF5641D82D01300289A90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F9DF5651D82D01300289A90 /* Build configuration list for PBXNativeTarget "Reserva" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F9DF5661D82D01300289A90 /* Debug */,
+				8F9DF5671D82D01300289A90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F9DF5681D82D01300289A90 /* Build configuration list for PBXNativeTarget "ReservaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F9DF5691D82D01300289A90 /* Debug */,
+				8F9DF56A1D82D01300289A90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F9DF56B1D82D01300289A90 /* Build configuration list for PBXNativeTarget "ReservaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F9DF56C1D82D01300289A90 /* Debug */,
+				8F9DF56D1D82D01300289A90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8F9DF5301D82D01300289A90 /* Project object */;
+}
