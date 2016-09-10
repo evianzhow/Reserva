@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AvailabilityTableViewController : UITableViewController
+@interface ModelAvailabilityTableViewController : UITableViewController
 
 @property (nonatomic, copy) NSString *modelString;
 

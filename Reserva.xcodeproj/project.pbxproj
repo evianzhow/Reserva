@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F07E7A21D83DF010046A69F /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07E7A11D83DF010046A69F /* Model.m */; };
 		8F9DF53D1D82D01300289A90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DF53C1D82D01300289A90 /* main.m */; };
 		8F9DF5401D82D01300289A90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DF53F1D82D01300289A90 /* AppDelegate.m */; };
-		8F9DF5431D82D01300289A90 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DF5421D82D01300289A90 /* ViewController.m */; };
+		8F9DF5431D82D01300289A90 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DF5421D82D01300289A90 /* MainViewController.m */; };
 		8F9DF5461D82D01300289A90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9DF5441D82D01300289A90 /* Main.storyboard */; };
 		8F9DF5481D82D01300289A90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F9DF5471D82D01300289A90 /* Assets.xcassets */; };
 		8F9DF54B1D82D01300289A90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9DF5491D82D01300289A90 /* LaunchScreen.storyboard */; };
 		8F9DF5561D82D01300289A90 /* Reserva_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DF5551D82D01300289A90 /* Reserva_Tests.m */; };
 		8F9DF5611D82D01300289A90 /* Reserva_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DF5601D82D01300289A90 /* Reserva_UITests.m */; };
 		8F9DF5701D82D04A00289A90 /* ModelSelectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DF56F1D82D04A00289A90 /* ModelSelectTableViewController.m */; };
-		8F9DF5741D82D9F700289A90 /* AvailabilityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DF5731D82D9F700289A90 /* AvailabilityTableViewController.m */; };
+		8F9DF5741D82D9F700289A90 /* ModelAvailabilityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DF5731D82D9F700289A90 /* ModelAvailabilityTableViewController.m */; };
 		8F9DF5771D82DB9000289A90 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DF5761D82DB9000289A90 /* Store.m */; };
 		B08ED2727D777BA7F0D05646 /* Pods_Reserva.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973BAA73FE8FC25C5AFE67A8 /* Pods_Reserva.framework */; };
 /* End PBXBuildFile section */
@@ -40,12 +41,14 @@
 
 /* Begin PBXFileReference section */
 		4EC5A2AC5B794AB3303F8D09 /* Pods-Reserva.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reserva.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reserva/Pods-Reserva.debug.xcconfig"; sourceTree = "<group>"; };
+		8F07E7A01D83DF010046A69F /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		8F07E7A11D83DF010046A69F /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		8F9DF5381D82D01300289A90 /* Reserva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reserva.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9DF53C1D82D01300289A90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8F9DF53E1D82D01300289A90 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8F9DF53F1D82D01300289A90 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8F9DF5411D82D01300289A90 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8F9DF5421D82D01300289A90 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8F9DF5411D82D01300289A90 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		8F9DF5421D82D01300289A90 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		8F9DF5451D82D01300289A90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8F9DF5471D82D01300289A90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F9DF54A1D82D01300289A90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,8 +62,8 @@
 		8F9DF56E1D82D04A00289A90 /* ModelSelectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelSelectTableViewController.h; sourceTree = "<group>"; };
 		8F9DF56F1D82D04A00289A90 /* ModelSelectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelSelectTableViewController.m; sourceTree = "<group>"; };
 		8F9DF5711D82D43700289A90 /* URLConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLConstants.h; sourceTree = "<group>"; };
-		8F9DF5721D82D9F700289A90 /* AvailabilityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvailabilityTableViewController.h; sourceTree = "<group>"; };
-		8F9DF5731D82D9F700289A90 /* AvailabilityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvailabilityTableViewController.m; sourceTree = "<group>"; };
+		8F9DF5721D82D9F700289A90 /* ModelAvailabilityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelAvailabilityTableViewController.h; sourceTree = "<group>"; };
+		8F9DF5731D82D9F700289A90 /* ModelAvailabilityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelAvailabilityTableViewController.m; sourceTree = "<group>"; };
 		8F9DF5751D82DB9000289A90 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
 		8F9DF5761D82DB9000289A90 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
 		973BAA73FE8FC25C5AFE67A8 /* Pods_Reserva.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reserva.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,14 +132,16 @@
 			children = (
 				8F9DF53E1D82D01300289A90 /* AppDelegate.h */,
 				8F9DF53F1D82D01300289A90 /* AppDelegate.m */,
-				8F9DF5411D82D01300289A90 /* ViewController.h */,
-				8F9DF5421D82D01300289A90 /* ViewController.m */,
+				8F9DF5411D82D01300289A90 /* MainViewController.h */,
+				8F9DF5421D82D01300289A90 /* MainViewController.m */,
 				8F9DF5751D82DB9000289A90 /* Store.h */,
 				8F9DF5761D82DB9000289A90 /* Store.m */,
+				8F07E7A01D83DF010046A69F /* Model.h */,
+				8F07E7A11D83DF010046A69F /* Model.m */,
 				8F9DF56E1D82D04A00289A90 /* ModelSelectTableViewController.h */,
 				8F9DF56F1D82D04A00289A90 /* ModelSelectTableViewController.m */,
-				8F9DF5721D82D9F700289A90 /* AvailabilityTableViewController.h */,
-				8F9DF5731D82D9F700289A90 /* AvailabilityTableViewController.m */,
+				8F9DF5721D82D9F700289A90 /* ModelAvailabilityTableViewController.h */,
+				8F9DF5731D82D9F700289A90 /* ModelAvailabilityTableViewController.m */,
 				8F9DF5441D82D01300289A90 /* Main.storyboard */,
 				8F9DF5711D82D43700289A90 /* URLConstants.h */,
 				8F9DF5471D82D01300289A90 /* Assets.xcassets */,
@@ -368,12 +373,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F9DF5431D82D01300289A90 /* ViewController.m in Sources */,
+				8F9DF5431D82D01300289A90 /* MainViewController.m in Sources */,
 				8F9DF5401D82D01300289A90 /* AppDelegate.m in Sources */,
 				8F9DF5701D82D04A00289A90 /* ModelSelectTableViewController.m in Sources */,
 				8F9DF5771D82DB9000289A90 /* Store.m in Sources */,
+				8F07E7A21D83DF010046A69F /* Model.m in Sources */,
 				8F9DF53D1D82D01300289A90 /* main.m in Sources */,
-				8F9DF5741D82D9F700289A90 /* AvailabilityTableViewController.m in Sources */,
+				8F9DF5741D82D9F700289A90 /* ModelAvailabilityTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

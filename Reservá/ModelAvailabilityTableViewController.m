@@ -6,7 +6,7 @@
 //  Copyright © 2016 Aladdin Inc. All rights reserved.
 //
 
-#import "AvailabilityTableViewController.h"
+#import "ModelAvailabilityTableViewController.h"
 #import "Store.h"
 #import "URLConstants.h"
 #import <AFNetworking/AFNetworking.h>
@@ -15,7 +15,7 @@
 static NSString *const AVAILABLE_STATUS_STRING = @"ALL";
 static NSString *const NONAVAILABLE_STATUS_STRING = @"NONE";
 
-@interface AvailabilityTableViewController ()
+@interface ModelAvailabilityTableViewController ()
 
 @property (strong, nonatomic) UISegmentedControl *segmentControl;
 
@@ -33,7 +33,7 @@ static NSString *const NONAVAILABLE_STATUS_STRING = @"NONE";
 
 @end
 
-@implementation AvailabilityTableViewController
+@implementation ModelAvailabilityTableViewController
 
 - (UISegmentedControl *)segmentControl
 {

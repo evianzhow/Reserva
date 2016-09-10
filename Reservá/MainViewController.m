@@ -6,10 +6,10 @@
 //  Copyright © 2016 Aladdin Inc. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
 #import "Store.h"
 
-@interface ViewController ()
+@interface MainViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

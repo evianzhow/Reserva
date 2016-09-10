@@ -7,53 +7,23 @@
 //
 
 #import "ModelSelectTableViewController.h"
+#import "Model.h"
 
 @interface ModelSelectTableViewController ()
 
-@property (nonatomic, readonly) NSArray *models;
+@property (nonatomic, strong) Model *model;
 
 @end
 
 @implementation ModelSelectTableViewController
 
-- (NSArray *)models
-{
-    return @[
-             @{@"iPhone 7 32GB 黑色": @"MNGQ2CH/A"},
-             @{@"iPhone 7 32GB 银色": @"MNGR2CH/A"},
-             @{@"iPhone 7 32GB 金色": @"MNGT2CH/A"},
-             @{@"iPhone 7 32GB 玫瑰金色": @"MNGW2CH/A"},
-             @{@"iPhone 7 128GB 黑色": @"MNGX2CH/A"},
-             @{@"iPhone 7 128GB 银色": @"MNGY2CH/A"},
-             @{@"iPhone 7 128GB 金色": @"MNH02CH/A"},
-             @{@"iPhone 7 128GB 玫瑰金色": @"MNH12CH/A"},
-             @{@"iPhone 7 128GB 亮黑色": @"MNH22CH/A"},
-             @{@"iPhone 7 256GB 黑色": @"MNH32CH/A"},
-             @{@"iPhone 7 256GB 银色": @"MNH42CH/A"},
-             @{@"iPhone 7 256GB 金色": @"MNH52CH/A"},
-             @{@"iPhone 7 256GB 玫瑰金色": @"MNH62CH/A"},
-             @{@"iPhone 7 256GB 亮黑色": @"MNH72CH/A"},
-             @{@"iPhone 7 Plus 128GB 黑色": @"MNFP2CH/A"},
-             @{@"iPhone 7 Plus 128GB 银色": @"MNFQ2CH/A"},
-             @{@"iPhone 7 Plus 128GB 金色": @"MNFR2CH/A"},
-             @{@"iPhone 7 Plus 128GB 玫瑰金色": @"MNFT2CH/A"},
-             @{@"iPhone 7 Plus 128GB 亮黑色": @"MNFU2CH/A"},
-             @{@"iPhone 7 Plus 256GB 黑色": @"MNFV2CH/A"},
-             @{@"iPhone 7 Plus 256GB 银色": @"MNFW2CH/A"},
-             @{@"iPhone 7 Plus 256GB 金色": @"MNFX2CH/A"},
-             @{@"iPhone 7 Plus 256GB 玫瑰金色": @"MNFY2CH/A"},
-             @{@"iPhone 7 Plus 256GB 亮黑色": @"MNG02CH/A"},
-             @{@"iPhone 7 Plus 32GB 黑色": @"MNRJ2CH/A"},
-             @{@"iPhone 7 Plus 32GB 银色": @"MNRK2CH/A"},
-             @{@"iPhone 7 Plus 32GB 金色": @"MNRL2CH/A"},
-             @{@"iPhone 7 Plus 32GB 玫瑰金色": @"MNRM2CH/A"},
-             ];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.title = @"Models";
+    
+    self.model = [Model sharedModel];
+    
     // Uncomment the following line to preserve selection between presentations.
     self.clearsSelectionOnViewWillAppear = YES;
     
@@ -73,7 +43,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.models.count;
+    return self.model.models.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -85,17 +55,17 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
     }
     // Configure the cell...
-    NSDictionary *model = self.models[indexPath.row];
-    cell.textLabel.text = model.allKeys.firstObject;
+    NSDictionary *model = self.model.models[indexPath.row];
+    cell.textLabel.text = model.allValues.firstObject[@"name"];
     cell.detailTextLabel.textColor = [UIColor lightGrayColor];
-    cell.detailTextLabel.text = model.allValues.firstObject;
+    cell.detailTextLabel.text = model.allKeys.firstObject;
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDictionary *model = self.models[indexPath.row];
+    NSDictionary *model = self.model.models[indexPath.row];
     NSString *modelString = model.allValues.firstObject;
     
     if (!modelString) {
@@ -114,11 +84,11 @@
     
     if (!indexPath) return;
     
-    NSDictionary *model = self.models[indexPath.row];
+    NSDictionary *model = self.model.models[indexPath.row];
     
     UIViewController *viewController = [segue destinationViewController];
     if ([viewController isKindOfClass:NSClassFromString(@"AvailabilityTableViewController")]) {
-        [viewController setValue:model.allValues.firstObject forKey:@"modelString"];
+        [viewController setValue:model.allKeys.firstObject forKey:@"modelString"];
     }
 }
 
