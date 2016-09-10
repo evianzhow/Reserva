@@ -214,7 +214,15 @@ static const NSTimeInterval refreshTimeInterval = 5.0f;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:RESERVATION_URL] options:@{} completionHandler:^(BOOL success) {
+    
+    if ([self.modelString isEqualToString:@""] || !self.modelString) return;
+    
+    NSDictionary *itemInfo = self.results[indexPath.row];
+    NSDictionary *storeInfo = itemInfo[@"storeInfo"];
+
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:RESERVATION_URL_TEMPLATE, [self.modelString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLPathAllowedCharacterSet]], storeInfo[@"storeNumber"]]];
+
+    [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
     }];
 }
 

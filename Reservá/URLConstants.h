@@ -11,7 +11,7 @@
 
 #define API_STORES_URL @"https://reserve.cdn-apple.com/CN/zh_CN/reserve/iPhone/stores.json"
 #define API_AVAILABILITY_URL @"https://reserve.cdn-apple.com/CN/zh_CN/reserve/iPhone/availability.json"
-#define RESERVATION_URL @"https://reserve.cdn-apple.com/CN/zh_CN/reserve/iPhone/availability?channel=2"
+#define RESERVATION_URL_TEMPLATE @"https://reserve-cn.apple.com/CN/zh_CN/reserve/iPhone?partNumber=%@&channel=2&rv=&path=&sourceID=&iPP=false&appleCare=&iUID=&iuToken=&carrier=&store=%@"
 
 #define TRAFFIC_RED_COLOR [UIColor colorWithRed:250/255.0f green:90/255.0f blue:98/255.0f alpha:1.0f]
 #define TRAFFIC_YELLOW_COLOR [UIColor colorWithRed:251/255.0f green:189/255.0f blue:78/255.0f alpha:1.0f]
