@@ -8,6 +8,7 @@
 
 #import "ModelSelectTableViewController.h"
 #import "Model.h"
+@import SDWebImage;
 
 @interface ModelSelectTableViewController ()
 
@@ -51,14 +52,21 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
     
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
-    }
-    // Configure the cell...
     NSDictionary *model = self.sharedModel.models[indexPath.row];
-    cell.textLabel.text = model.allValues.firstObject[@"name"];
-    cell.detailTextLabel.textColor = [UIColor lightGrayColor];
-    cell.detailTextLabel.text = model.allKeys.firstObject;
+
+    // Configure the cell...
+    UILabel *modelNameLabel = [cell viewWithTag:1];
+    UILabel *modelNumberLabel = [cell viewWithTag:2];
+    UIImageView *colorSwatchImageView = [cell viewWithTag:3];
+    
+    modelNameLabel.text = model.allValues.firstObject[@"name"];
+    modelNumberLabel.textColor = [UIColor lightGrayColor];
+    modelNumberLabel.text = model.allKeys.firstObject;
+    
+    [colorSwatchImageView sd_setImageWithURL:[NSURL URLWithString:model.allValues.firstObject[@"colorSwatch"]]];
+    colorSwatchImageView.layer.cornerRadius = 4.0f;
+    colorSwatchImageView.layer.shouldRasterize = YES;
+    colorSwatchImageView.clipsToBounds = YES;
     
     return cell;
 }

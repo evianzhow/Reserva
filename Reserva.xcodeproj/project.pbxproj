@@ -130,6 +130,7 @@
 		8F9DF53A1D82D01300289A90 /* Reservá */ = {
 			isa = PBXGroup;
 			children = (
+				8FDFA0451D8405B700EFB3E8 /* Categories */,
 				8F9DF53E1D82D01300289A90 /* AppDelegate.h */,
 				8F9DF53F1D82D01300289A90 /* AppDelegate.m */,
 				8F9DF5411D82D01300289A90 /* MainViewController.h */,
@@ -176,6 +177,13 @@
 				8F9DF5621D82D01300289A90 /* Info.plist */,
 			);
 			path = "ReserváUITests";
+			sourceTree = "<group>";
+		};
+		8FDFA0451D8405B700EFB3E8 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		C7B6050818F49801571C468A /* Frameworks */ = {
