@@ -39,9 +39,13 @@
 - (void)didReceivedStores:(NSNotification *)noti
 {
     {
-        self.nextButton.enabled = YES;
         self.indicator.hidden = YES;
         [self.indicator stopAnimating];
+        BOOL enabled = NO;
+        for (NSDictionary *store in self.sharedStore.stores) {
+            enabled |= [store[@"storeEnabled"] boolValue];
+        }
+        self.nextButton.enabled = enabled;
     }
 }
 

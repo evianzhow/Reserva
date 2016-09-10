@@ -15,6 +15,8 @@
 static NSString *const AVAILABLE_STATUS_STRING = @"ALL";
 static NSString *const NONAVAILABLE_STATUS_STRING = @"NONE";
 
+static const NSTimeInterval refreshTimeInterval = 5.0f;
+
 @interface ModelAvailabilityTableViewController ()
 
 @property (strong, nonatomic) UISegmentedControl *segmentControl;
@@ -90,10 +92,17 @@ static NSString *const NONAVAILABLE_STATUS_STRING = @"NONE";
     [self checkAvailabilityForModel:self.modelString];
     
     __weak __typeof__(self) weakSelf = self;
-    self.refreshTimer = [NSTimer timerWithTimeInterval:2.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+    self.refreshTimer = [NSTimer timerWithTimeInterval:refreshTimeInterval repeats:YES block:^(NSTimer * _Nonnull timer) {
         if (weakSelf.fetching) return;
         [weakSelf checkAvailabilityForModel:weakSelf.modelString];
     }];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    [SVProgressHUD dismiss];
 }
 
 - (void)dealloc
@@ -121,9 +130,10 @@ static NSString *const NONAVAILABLE_STATUS_STRING = @"NONE";
 
 - (void)checkAvailabilityForModel:(NSString *)modelString
 {
-    self.fetching = YES;
     if ([modelString isEqualToString:@""] || !modelString) return;
     
+    self.fetching = YES;
+
     NSURL *URL = [NSURL URLWithString:API_AVAILABILITY_URL];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:URL.absoluteString parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
@@ -193,7 +203,7 @@ static NSString *const NONAVAILABLE_STATUS_STRING = @"NONE";
     
     NSDictionary *storeInfo = itemInfo[@"storeInfo"];
     if ([storeInfo isKindOfClass:[NSDictionary class]]) {
-        storeNameLabel.text = [NSString stringWithFormat:@"%@， %@", storeInfo[@"storeCity"], storeInfo[@"storeName"]];
+        storeNameLabel.text = [NSString stringWithFormat:@"%@，%@", storeInfo[@"storeCity"], storeInfo[@"storeName"]];
     }
     pickupTimeLabel.text = itemInfo[@"timeSlot"];
     setupAvailabilityStatusLabelFromStatus(itemInfo[@"availability"], availabilityStatusLabel);
@@ -212,13 +222,13 @@ void setupAvailabilityStatusLabelFromStatus(NSString *string, UILabel *label) {
     string = [string uppercaseString];
     if ([string isEqualToString:AVAILABLE_STATUS_STRING]) {
         label.text = @"有货";
-        label.textColor = [UIColor colorWithRed:61/255.0f green:200/255.0f blue:81/255.0f alpha:1.0f];
+        label.textColor = TRAFFIC_GREEN_COLOR;
     } else if ([string isEqualToString:NONAVAILABLE_STATUS_STRING]) {
         label.text = @"无货";
-        label.textColor = [UIColor colorWithRed:250/255.0f green:90/255.0f blue:98/255.0f alpha:1.0f];
+        label.textColor = TRAFFIC_RED_COLOR;
     } else {
         label.text = @"未知";
-        label.textColor = [UIColor colorWithRed:251/255.0f green:189/255.0f blue:78/255.0f alpha:1.0f];
+        label.textColor = TRAFFIC_YELLOW_COLOR;
     }
 }
 

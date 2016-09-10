@@ -11,7 +11,7 @@
 
 @interface ModelSelectTableViewController ()
 
-@property (nonatomic, strong) Model *model;
+@property (nonatomic, strong) Model *sharedModel;
 
 @end
 
@@ -22,7 +22,7 @@
     
     self.title = @"Models";
     
-    self.model = [Model sharedModel];
+    self.sharedModel = [Model sharedModel];
     
     // Uncomment the following line to preserve selection between presentations.
     self.clearsSelectionOnViewWillAppear = YES;
@@ -43,7 +43,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.model.models.count;
+    return self.sharedModel.models.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -55,7 +55,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
     }
     // Configure the cell...
-    NSDictionary *model = self.model.models[indexPath.row];
+    NSDictionary *model = self.sharedModel.models[indexPath.row];
     cell.textLabel.text = model.allValues.firstObject[@"name"];
     cell.detailTextLabel.textColor = [UIColor lightGrayColor];
     cell.detailTextLabel.text = model.allKeys.firstObject;
@@ -65,7 +65,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDictionary *model = self.model.models[indexPath.row];
+    NSDictionary *model = self.sharedModel.models[indexPath.row];
     NSString *modelString = model.allValues.firstObject;
     
     if (!modelString) {
@@ -84,10 +84,10 @@
     
     if (!indexPath) return;
     
-    NSDictionary *model = self.model.models[indexPath.row];
+    NSDictionary *model = self.sharedModel.models[indexPath.row];
     
     UIViewController *viewController = [segue destinationViewController];
-    if ([viewController isKindOfClass:NSClassFromString(@"AvailabilityTableViewController")]) {
+    if ([viewController isKindOfClass:NSClassFromString(@"ModelAvailabilityTableViewController")]) {
         [viewController setValue:model.allKeys.firstObject forKey:@"modelString"];
     }
 }

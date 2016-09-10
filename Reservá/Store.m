@@ -71,6 +71,7 @@ NSString *const StoreGetLoadingNotification = @"StoreGetLoadingNotification";
                            @"storeNumber": store[@"storeNumber"],
                            @"storeName": store[@"storeName"],
                            @"storeCity": store[@"storeCity"],
+                           @"storeEnabled": store[@"storeEnabled"],
                            }];
     }
     _stores = [NSArray arrayWithArray:stores];
