@@ -154,8 +154,14 @@ static const NSTimeInterval defaultRefreshTimeInterval = 30.0f;
     if ([modelString isEqualToString:@""] || !modelString) return;
     
     self.fetching = YES;
+    
+    NSString *interpolation = @"CN";
+    id obj = [[NSUserDefaults standardUserDefaults] objectForKey:REGION_STORED_KEY];
+    if ([obj isKindOfClass:[NSString class]] && [(NSString *)obj isEqualToString:@"HK"]) {
+        interpolation = @"HK";
+    }
 
-    NSURL *URL = [NSURL URLWithString:API_AVAILABILITY_URL];
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:API_AVAILABILITY_URL, interpolation, interpolation]];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:URL.absoluteString parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         self.fetching = NO;
@@ -178,6 +184,12 @@ static const NSTimeInterval defaultRefreshTimeInterval = 30.0f;
         self.firstLoad = NO;
     }
     
+    NSString *interpolation = @"zh_CN";
+    id obj = [[NSUserDefaults standardUserDefaults] objectForKey:REGION_STORED_KEY];
+    if ([obj isKindOfClass:[NSString class]] && [(NSString *)obj isEqualToString:@"HK"]) {
+        interpolation = @"zh_HK";
+    }
+    
     NSMutableArray *results = [@[] mutableCopy];
     
     for (NSString *storeKey in [response allKeys]) {
@@ -187,7 +199,13 @@ static const NSTimeInterval defaultRefreshTimeInterval = 30.0f;
         [results addObject:@{
                              @"storeInfo": [Store storeInfoFromNumber:storeKey] ? : [NSNull null],
                              @"availability": storeStatus[self.modelString],
-                             @"timeSlot": storeStatus[@"timeSlot"] ? (storeStatus[@"timeSlot"][@"zh_CN"] ? (storeStatus[@"timeSlot"][@"zh_CN"][@"timeslotTime"] ? : [NSNull null]) : [NSNull null]) : [NSNull null]
+                             @"timeSlot": IS_NIL_OBJECT(storeStatus[@"timeSlot"])
+                             ? [NSNull null]
+                             : IS_NIL_OBJECT(storeStatus[@"timeSlot"][interpolation])
+                                ? [NSNull null]
+                                : IS_NIL_OBJECT(storeStatus[@"timeSlot"][interpolation][@"timeslotTime"])
+                                   ? [NSNull null]
+                                   : storeStatus[@"timeSlot"][interpolation][@"timeslotTime"]
                              }];
     }
     
@@ -226,7 +244,7 @@ static const NSTimeInterval defaultRefreshTimeInterval = 30.0f;
     if ([storeInfo isKindOfClass:[NSDictionary class]]) {
         storeNameLabel.text = [NSString stringWithFormat:@"%@，%@", storeInfo[@"storeCity"], storeInfo[@"storeName"]];
     }
-    pickupTimeLabel.text = itemInfo[@"timeSlot"];
+    pickupTimeLabel.text = IS_NIL_OBJECT(itemInfo[@"timeSlot"]) ? @"不可用" : [NSString stringWithFormat:@"%@", itemInfo[@"timeSlot"]];
     setupAvailabilityStatusLabelFromStatus(itemInfo[@"availability"], availabilityStatusLabel);
     
     return cell;
@@ -236,15 +254,25 @@ static const NSTimeInterval defaultRefreshTimeInterval = 30.0f;
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    NSString *interpolation = @"CN";
+    id obj = [[NSUserDefaults standardUserDefaults] objectForKey:REGION_STORED_KEY];
+    if ([obj isKindOfClass:[NSString class]] && [(NSString *)obj isEqualToString:@"HK"]) {
+        interpolation = @"HK";
+    }
+    
     if ([self.modelString isEqualToString:@""] || !self.modelString) return;
     
     NSDictionary *itemInfo = self.results[indexPath.row];
     NSDictionary *storeInfo = itemInfo[@"storeInfo"];
 
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:RESERVATION_URL_TEMPLATE, [self.modelString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLPathAllowedCharacterSet]], storeInfo[@"storeNumber"]]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:RESERVATION_URL_TEMPLATE, [interpolation lowercaseString], interpolation, interpolation, [self.modelString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLPathAllowedCharacterSet]], storeInfo[@"storeNumber"]]];
 
-    [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
-    }];
+    if (SYSTEM_VERSION_GREATER_THAN(@"10")) {
+        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
+        }];
+    } else {
+        [[UIApplication sharedApplication] openURL:url];
+    }
 }
 
 void setupAvailabilityStatusLabelFromStatus(NSString *string, UILabel *label) {

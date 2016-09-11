@@ -12,6 +12,7 @@
 
 NSString *const StoreGetReadyNotification = @"StoreGetReadyNotification";
 NSString *const StoreGetLoadingNotification = @"StoreGetLoadingNotification";
+extern NSString *const RegionGetChangedNotification;
 
 @interface Store ()
 
@@ -38,18 +39,25 @@ NSString *const StoreGetLoadingNotification = @"StoreGetLoadingNotification";
     self = [super init];
     if (self) {
         [self getStores];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getStores) name:RegionGetChangedNotification object:nil];
     }
     return self;
 }
 
 - (void)dealloc
 {
-    NSLog(@"%@ get dealloced!\n", NSStringFromClass([self class]));
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:RegionGetChangedNotification object:nil];
 }
 
 - (void)getStores
 {
-    NSURL *URL = [NSURL URLWithString:API_STORES_URL];
+    NSString *interpolation = @"CN";
+    id obj = [[NSUserDefaults standardUserDefaults] objectForKey:REGION_STORED_KEY];
+    if ([obj isKindOfClass:[NSString class]] && [(NSString *)obj isEqualToString:@"HK"]) {
+        interpolation = @"HK";
+    }
+    
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:API_STORES_URL, interpolation, interpolation]];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:URL.absoluteString parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
@@ -59,7 +67,7 @@ NSString *const StoreGetLoadingNotification = @"StoreGetLoadingNotification";
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
-    [[NSNotificationCenter defaultCenter] postNotificationName:StoreGetReadyNotification object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:StoreGetLoadingNotification object:nil];
 }
 
 - (void)setStoresResponse:(NSDictionary *)response
