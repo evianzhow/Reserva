@@ -102,10 +102,21 @@ static const NSTimeInterval defaultRefreshTimeInterval = 30.0f;
     [self checkAvailabilityForModel:self.modelString];
     
     __weak __typeof__(self) weakSelf = self;
-    self.refreshTimer = [NSTimer timerWithTimeInterval:[[self class] refreshTimeInterval] repeats:YES block:^(NSTimer * _Nonnull timer) {
-        if (weakSelf.fetching) return;
-        [weakSelf checkAvailabilityForModel:weakSelf.modelString];
-    }];
+    if (SYSTEM_VERSION_GREATER_THAN(@"10")) {
+        self.refreshTimer = [NSTimer timerWithTimeInterval:[[self class] refreshTimeInterval] repeats:YES block:^(NSTimer * _Nonnull timer) {
+            if (weakSelf.fetching) return;
+            [weakSelf checkAvailabilityForModel:weakSelf.modelString];
+        }];
+    } else {
+        self.refreshTimer = [NSTimer timerWithTimeInterval:[[self class] refreshTimeInterval] target:weakSelf selector:@selector(refreshTimerInvoked:) userInfo:nil repeats:YES];
+    }
+}
+
+// iOS 9 Compatibility
+- (IBAction)refreshTimerInvoked:(id)sender
+{
+    if (self.fetching) return;
+    [self checkAvailabilityForModel:self.modelString];
 }
 
 - (void)viewDidDisappear:(BOOL)animated

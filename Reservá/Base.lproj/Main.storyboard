@@ -63,7 +63,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KHx-Hj-hAq" id="1KX-gU-y5H">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GDk-DM-txB">
@@ -129,7 +129,7 @@
                                     <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crs-sm-0rK">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Crs-sm-0rK">
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -149,6 +149,7 @@
                                         <constraint firstItem="bb0-lK-jjp" firstAttribute="centerY" secondItem="2ym-Kn-2Li" secondAttribute="centerY" id="9om-EI-9Jg"/>
                                         <constraint firstItem="Crs-sm-0rK" firstAttribute="centerY" secondItem="2ym-Kn-2Li" secondAttribute="centerY" id="A8v-1b-hzG"/>
                                         <constraint firstItem="rXg-3o-9Wl" firstAttribute="leading" secondItem="Crs-sm-0rK" secondAttribute="trailing" constant="8" id="ZfI-wd-ldZ"/>
+                                        <constraint firstItem="bb0-lK-jjp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rXg-3o-9Wl" secondAttribute="trailing" constant="8" id="cBv-c6-uaZ"/>
                                         <constraint firstAttribute="trailing" secondItem="bb0-lK-jjp" secondAttribute="trailing" constant="15" id="jJv-On-0bK"/>
                                         <constraint firstItem="Crs-sm-0rK" firstAttribute="leading" secondItem="2ym-Kn-2Li" secondAttribute="leading" constant="15" id="njG-to-GmS"/>
                                         <constraint firstItem="rXg-3o-9Wl" firstAttribute="centerY" secondItem="2ym-Kn-2Li" secondAttribute="centerY" id="odZ-gp-DZa"/>

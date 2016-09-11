@@ -19,4 +19,6 @@
 
 #define REFRESH_TIME_INTERVAL_STORED_KEY @"RefreshTimeInterval"
 
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+
 #endif /* Constants_h */
