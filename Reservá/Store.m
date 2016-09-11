@@ -8,7 +8,7 @@
 
 #import "Store.h"
 #import <AFNetworking/AFNetworking.h>
-#import "URLConstants.h"
+#import "Constants.h"
 
 NSString *const StoreGetReadyNotification = @"StoreGetReadyNotification";
 NSString *const StoreGetLoadingNotification = @"StoreGetLoadingNotification";

@@ -61,7 +61,7 @@
 		8F9DF5621D82D01300289A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F9DF56E1D82D04A00289A90 /* ModelSelectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelSelectTableViewController.h; sourceTree = "<group>"; };
 		8F9DF56F1D82D04A00289A90 /* ModelSelectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelSelectTableViewController.m; sourceTree = "<group>"; };
-		8F9DF5711D82D43700289A90 /* URLConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLConstants.h; sourceTree = "<group>"; };
+		8F9DF5711D82D43700289A90 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		8F9DF5721D82D9F700289A90 /* ModelAvailabilityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelAvailabilityTableViewController.h; sourceTree = "<group>"; };
 		8F9DF5731D82D9F700289A90 /* ModelAvailabilityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelAvailabilityTableViewController.m; sourceTree = "<group>"; };
 		8F9DF5751D82DB9000289A90 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 				8F9DF5721D82D9F700289A90 /* ModelAvailabilityTableViewController.h */,
 				8F9DF5731D82D9F700289A90 /* ModelAvailabilityTableViewController.m */,
 				8F9DF5441D82D01300289A90 /* Main.storyboard */,
-				8F9DF5711D82D43700289A90 /* URLConstants.h */,
+				8F9DF5711D82D43700289A90 /* Constants.h */,
 				8F9DF5471D82D01300289A90 /* Assets.xcassets */,
 				8F9DF5491D82D01300289A90 /* LaunchScreen.storyboard */,
 				8F9DF54C1D82D01300289A90 /* Info.plist */,
@@ -207,6 +207,7 @@
 				8F9DF5361D82D01300289A90 /* Resources */,
 				8E2ADF2148E362D5281A2C82 /* [CP] Embed Pods Frameworks */,
 				404D743784FEA32092CA31D3 /* [CP] Copy Pods Resources */,
+				8FB8C6291D85423700D0C69C /* Fabric.io */,
 			);
 			buildRules = (
 			);
@@ -358,6 +359,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Reserva/Pods-Reserva-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		8FB8C6291D85423700D0C69C /* Fabric.io */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric.io;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 8ea1fa3b46c557016ae656eb2a38bd806df6cf51 0987121fadaa16367b28e262d446aac46ecd13785e5311a8536c3c3c829db0b0";
 		};
 		C9D7EE7F22892554BBF1ED05 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

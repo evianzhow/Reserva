@@ -8,6 +8,8 @@
 
 #import "ModelSelectTableViewController.h"
 #import "Model.h"
+#import <Crashlytics/Crashlytics.h> // If using Answers with Crashlytics
+
 @import SDWebImage;
 
 @interface ModelSelectTableViewController ()
@@ -93,11 +95,16 @@
     if (!indexPath) return;
     
     NSDictionary *model = self.sharedModel.models[indexPath.row];
+    NSString *modelString = model.allKeys.firstObject;
     
     UIViewController *viewController = [segue destinationViewController];
     if ([viewController isKindOfClass:NSClassFromString(@"ModelAvailabilityTableViewController")]) {
-        [viewController setValue:model.allKeys.firstObject forKey:@"modelString"];
+        [viewController setValue:modelString forKey:@"modelString"];
     }
+    
+    // TODO: Track the user action that is important for you.
+    [Answers logContentViewWithName:@"SelectModel" contentType:@"Model" contentId:modelString customAttributes:model];
+
 }
 
 @end

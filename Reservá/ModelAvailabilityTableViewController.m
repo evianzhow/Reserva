@@ -8,14 +8,14 @@
 
 #import "ModelAvailabilityTableViewController.h"
 #import "Store.h"
-#import "URLConstants.h"
+#import "Constants.h"
 #import <AFNetworking/AFNetworking.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 
 static NSString *const AVAILABLE_STATUS_STRING = @"ALL";
 static NSString *const NONAVAILABLE_STATUS_STRING = @"NONE";
 
-static const NSTimeInterval refreshTimeInterval = 5.0f;
+static const NSTimeInterval defaultRefreshTimeInterval = 30.0f;
 
 @interface ModelAvailabilityTableViewController ()
 
@@ -36,6 +36,16 @@ static const NSTimeInterval refreshTimeInterval = 5.0f;
 @end
 
 @implementation ModelAvailabilityTableViewController
+
++ (NSTimeInterval)refreshTimeInterval
+{
+    NSUInteger storedTime = [[NSUserDefaults standardUserDefaults] integerForKey:REFRESH_TIME_INTERVAL_STORED_KEY];
+    if (storedTime == 0) {
+        return defaultRefreshTimeInterval;
+    } else {
+        return (NSTimeInterval)storedTime;
+    }
+}
 
 - (UISegmentedControl *)segmentControl
 {
@@ -92,7 +102,7 @@ static const NSTimeInterval refreshTimeInterval = 5.0f;
     [self checkAvailabilityForModel:self.modelString];
     
     __weak __typeof__(self) weakSelf = self;
-    self.refreshTimer = [NSTimer timerWithTimeInterval:refreshTimeInterval repeats:YES block:^(NSTimer * _Nonnull timer) {
+    self.refreshTimer = [NSTimer timerWithTimeInterval:[[self class] refreshTimeInterval] repeats:YES block:^(NSTimer * _Nonnull timer) {
         if (weakSelf.fetching) return;
         [weakSelf checkAvailabilityForModel:weakSelf.modelString];
     }];
