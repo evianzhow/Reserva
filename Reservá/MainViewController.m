@@ -79,6 +79,11 @@ NSString *const RegionGetChangedNotification = @"RegionGetChanged";
     [alert addAction:[UIAlertAction actionWithTitle:@"No refresh" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [[NSUserDefaults standardUserDefaults] setInteger:NSIntegerMax forKey:REFRESH_TIME_INTERVAL_STORED_KEY];
     }]];
+    if (IS_IPAD) {
+        [alert setModalPresentationStyle:UIModalPresentationPopover];
+        UIPopoverPresentationController *popPresenter = [alert popoverPresentationController];
+        popPresenter.barButtonItem = self.navigationItem.rightBarButtonItem;
+    }
     [self presentViewController:alert animated:YES completion:nil];
 }
 
@@ -93,6 +98,11 @@ NSString *const RegionGetChangedNotification = @"RegionGetChanged";
         [[NSUserDefaults standardUserDefaults] setObject:@"HK" forKey:REGION_STORED_KEY];
         [[NSNotificationCenter defaultCenter] postNotificationName:RegionGetChangedNotification object:nil];
     }]];
+    if (IS_IPAD) {
+        [alert setModalPresentationStyle:UIModalPresentationPopover];
+        UIPopoverPresentationController *popPresenter = [alert popoverPresentationController];
+        popPresenter.barButtonItem = self.navigationItem.leftBarButtonItem;
+    }
     [self presentViewController:alert animated:YES completion:nil];
 }
 

@@ -43,6 +43,7 @@
 		4EC5A2AC5B794AB3303F8D09 /* Pods-Reserva.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reserva.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reserva/Pods-Reserva.debug.xcconfig"; sourceTree = "<group>"; };
 		8F07E7A01D83DF010046A69F /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		8F07E7A11D83DF010046A69F /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		8F1916F91D863533005D64B4 /* Reservá.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Reservá.h"; sourceTree = "<group>"; };
 		8F9DF5381D82D01300289A90 /* Reserva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reserva.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9DF53C1D82D01300289A90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8F9DF53E1D82D01300289A90 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -145,6 +146,7 @@
 				8F9DF5731D82D9F700289A90 /* ModelAvailabilityTableViewController.m */,
 				8F9DF5441D82D01300289A90 /* Main.storyboard */,
 				8F9DF5711D82D43700289A90 /* Constants.h */,
+				8F1916F91D863533005D64B4 /* Reservá.h */,
 				8F9DF5471D82D01300289A90 /* Assets.xcassets */,
 				8F9DF5491D82D01300289A90 /* LaunchScreen.storyboard */,
 				8F9DF54C1D82D01300289A90 /* Info.plist */,
@@ -553,6 +555,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4YUXZK65CA;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Reservá/Reservá.h";
 				INFOPLIST_FILE = "Reservá/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -567,6 +571,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4YUXZK65CA;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Reservá/Reservá.h";
 				INFOPLIST_FILE = "Reservá/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

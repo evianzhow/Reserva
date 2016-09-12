@@ -20,8 +20,4 @@
 #define REFRESH_TIME_INTERVAL_STORED_KEY @"RefreshTimeInterval"
 #define REGION_STORED_KEY @"Region"
 
-#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
-
-#define IS_NIL_OBJECT(OBJ) (!OBJ || [OBJ isKindOfClass:[NSNull class]])
-
 #endif /* Constants_h */
