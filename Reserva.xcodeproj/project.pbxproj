@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8F07E7A21D83DF010046A69F /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F07E7A11D83DF010046A69F /* Model.m */; };
+		8F48D3401D864EB800FD9EDC /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F48D33E1D864E4600FD9EDC /* JSPatch.framework */; };
 		8F9DF53D1D82D01300289A90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DF53C1D82D01300289A90 /* main.m */; };
 		8F9DF5401D82D01300289A90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DF53F1D82D01300289A90 /* AppDelegate.m */; };
 		8F9DF5431D82D01300289A90 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DF5421D82D01300289A90 /* MainViewController.m */; };
@@ -44,6 +45,7 @@
 		8F07E7A01D83DF010046A69F /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		8F07E7A11D83DF010046A69F /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		8F1916F91D863533005D64B4 /* Reservá.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Reservá.h"; sourceTree = "<group>"; };
+		8F48D33E1D864E4600FD9EDC /* JSPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSPatch.framework; path = Frameworks/JSPatch.framework; sourceTree = "<group>"; };
 		8F9DF5381D82D01300289A90 /* Reserva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reserva.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9DF53C1D82D01300289A90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8F9DF53E1D82D01300289A90 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F48D3401D864EB800FD9EDC /* JSPatch.framework in Frameworks */,
 				B08ED2727D777BA7F0D05646 /* Pods_Reserva.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,6 +194,7 @@
 		C7B6050818F49801571C468A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F48D33E1D864E4600FD9EDC /* JSPatch.framework */,
 				973BAA73FE8FC25C5AFE67A8 /* Pods_Reserva.framework */,
 			);
 			name = Frameworks;
@@ -204,6 +208,7 @@
 			buildConfigurationList = 8F9DF5651D82D01300289A90 /* Build configuration list for PBXNativeTarget "Reserva" */;
 			buildPhases = (
 				C9D7EE7F22892554BBF1ED05 /* [CP] Check Pods Manifest.lock */,
+				8F48D33D1D864D2F00FD9EDC /* Update BuildNumber */,
 				8F9DF5341D82D01300289A90 /* Sources */,
 				8F9DF5351D82D01300289A90 /* Frameworks */,
 				8F9DF5361D82D01300289A90 /* Resources */,
@@ -361,6 +366,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Reserva/Pods-Reserva-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		8F48D33D1D864D2F00FD9EDC /* Update BuildNumber */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update BuildNumber";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" != \"Debug\" ]; then\n  // Update buildNumber\n  branch=${1:-'origin/master'}\n  buildNumber=$(expr $(git rev-list $branch --count) - $(git rev-list HEAD..$branch --count))\n  echo \"Updating build number to $buildNumber using branch '$branch'.\"\n  /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\nfi";
 		};
 		8FB8C6291D85423700D0C69C /* Fabric.io */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -555,6 +574,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4YUXZK65CA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Reservá/Reservá.h";
 				INFOPLIST_FILE = "Reservá/Info.plist";
@@ -571,6 +595,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4YUXZK65CA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Reservá/Reservá.h";
 				INFOPLIST_FILE = "Reservá/Info.plist";
