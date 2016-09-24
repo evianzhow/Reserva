@@ -11,6 +11,7 @@
 #import "Constants.h"
 #import <AFNetworking/AFNetworking.h>
 #import <SVProgressHUD/SVProgressHUD.h>
+#import <AudioToolbox/AudioServices.h>
 
 static NSString *const AVAILABLE_STATUS_STRING = @"ALL";
 static NSString *const NONAVAILABLE_STATUS_STRING = @"NONE";
@@ -209,8 +210,21 @@ static const NSTimeInterval defaultRefreshTimeInterval = 30.0f;
                              }];
     }
     
+    [self compareAndReload:results];
+}
+
+- (void)compareAndReload:(NSArray *)results
+{
+    NSArray *oldResults = [self.results copy];
+    
     self.results = [NSArray arrayWithArray:results];
     [self.tableView reloadData];
+
+    NSArray *newResults = [self.results copy];
+    
+    if (![newResults isEqualToArray:oldResults] && self.segmentControl.selectedSegmentIndex == 1) {
+        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+    }
 }
 
 - (IBAction)didChangedFilter:(id)sender
