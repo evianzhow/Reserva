@@ -120,10 +120,18 @@ static const NSTimeInterval defaultRefreshTimeInterval = 30.0f;
     [self checkAvailabilityForModel:self.modelString];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [[UIApplication sharedApplication] setIdleTimerDisabled: YES];
+}
+
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
     
+    [[UIApplication sharedApplication] setIdleTimerDisabled: NO];
     [SVProgressHUD dismiss];
 }
 
